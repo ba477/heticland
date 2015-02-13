@@ -1,0 +1,354 @@
+/*CSS*/
+
+/*INSCRIPTION ET CONNEXION*/
+.container {
+	background: url(../images/connexion/bg_connexion.jpg) no-repeat; 
+ 	background-size: cover; /* version standardisée */
+	height: 100vh;
+	text-align:center;
+}
+h1 {
+	text-align: center;
+	padding:80px 0 50px 0;
+}
+.connexion {
+	display:inline-block;
+	width: 500px;
+	padding:50px 50px;
+	background-color: #a5e93e;
+ 	box-shadow: 1px 1px 12px #555;
+	border-radius: 10px;
+}
+.connexion h2 {
+	padding-bottom: 35px;
+	font: 40px 'Fredoka One', cursive;
+	text-align: center;
+	color: #e04312;
+	text-shadow: #fff 2px 2px, #fff -2px 2px, #fff -2px -2px, #fff 2px -2px;
+}
+.connexion h3 {
+	padding:0 20px 35px 20px;
+	font: 25px 'Fredoka One', cursive;
+	text-align: center;
+	color: #e04312;
+	text-shadow: #fff 2px 2px, #fff -2px 2px, #fff -2px -2px, #fff 2px -2px;
+}
+.connexion label  {
+	display: block;
+	margin:10px 0 5px 0;
+	font: 15px "Open Sans";
+	text-transform:uppercase;
+	color: #e04312;
+}
+input {
+	background-color:rgb(198, 234, 144);
+	width:150px;
+	height:20px;
+	border:1px solid rgb(151, 175, 51);
+}
+input.submit {
+	background:url(../images/connexion/button_connect.png) no-repeat;
+	background-size:cover;
+	height:35px;
+	width:150px;
+	margin:30px 0 20px 0;
+	font: 17px 'Fredoka One';
+	color:#e04312;
+	text-shadow: #fff 1px 1px, #fff -1px 1px, #fff -1px -1px, #fff 1px -1px;
+	border:none;
+	text-transform:uppercase;
+	background-color:#0BC119;*/
+}
+.connexion a {
+	text-decoration: none;
+	text-transform:uppercase;
+	font: 16px 'Fredoka One';
+	color:#fff;
+}
+.perso_utilisateur {
+	position:fixed;
+	left:600px;
+	top:350px;
+}
+/*FIN INSCRIPTION ET CONNEXION*/
+
+/*DEBUT WELCOME*/
+.welcome {
+	background: url(../images/connexion/bg_brontis.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position:relative;
+}
+.speech {
+	/*padding:550px 610px 0 620px;*/
+	padding:30% 33% 1.5% 34%;
+	color:#fff;
+}
+.play a{
+	padding:2.5% 33% 0 45%;
+	color:#e04312;
+	font:20px 'Fredoka one';
+	text-shadow: #fff 1px 1px, #fff -1px 1px, #fff -1px -1px, #fff 1px -1px;
+	text-decoration:none;
+}
+
+/*FIN WELCOME*/
+
+
+/*SALLE DE CLASSE*/
+.salledeclasse {
+	background: url(../images/salledeclasse/background.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position:relative;
+}
+.titrecours {
+	padding:150px 0 30px 0;
+	font: 28px 'Fredoka One';
+	text-transform:uppercase;
+	text-align:center;
+}
+.salledeclasse .formulaire ul li{
+	text-align:center;
+}
+.salledeclasse .formulaire label {
+	font:16px 'Open Sans';
+}
+.salledeclasse .formulaire input {
+	background-color:rgb(204, 244, 186);
+	border:none;
+	width:200px;
+	height:20px;
+	margin:10px 0 10px 0;
+}
+.salledeclasse .formulaire input.submit {
+	margin-top:20px;
+	height:45px;
+}
+.salledeclasse .prof {
+	position:fixed;
+	top:200px;
+	left:180px;
+	height:80%;
+}
+/*FIN SALLE DE CLASSE*/
+
+
+/*INFOS*/
+.infos {
+	position:absolute;
+	right:0px;
+	margin:20px 50px 0 0;
+	z-index:999;
+}
+.infos h2{
+	padding-bottom:10px;
+	font: 20px 'Fredoka One';
+	background-color:none;
+	color: #e04312;
+	text-shadow: #fff 2px 2px, #fff -2px 2px, #fff -2px -2px, #fff 2px -2px;
+}
+.infos th {
+	margin-top:20px;
+	padding-bottom:30px;
+	font: 20px 'Fredoka One';
+	background-color:none;
+	text-align: center;
+	color: #e04312;
+	text-shadow: #fff 2px 2px, #fff -2px 2px, #fff -2px -2px, #fff 2px -2px;
+}
+.infos tbody{
+	background-color:rgba(255, 255, 255, 0.3);
+}
+.infos tr td{
+	width:50px;
+	padding:15px 15px;
+	text-align:center;
+	font: 15px 'Fredoka One';
+	color:rgb(151, 175, 51);
+}
+.infos tr td span{
+	width:50px;
+	/*padding:15px 15px;*/
+	text-align:center;
+	font: 15px 'Fredoka One';
+	color:rgb(151, 175, 51);
+}
+/*FIN INFOS*/
+
+/*MODAL*/
+.modalDialog {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.7);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 700px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #a5e93e;
+ 	box-shadow: 1px 1px 12px #555;
+}
+
+.modalDialog p {
+	margin:20px 0;
+	font: 22px 'Fredoka One';
+	color: #e04312;
+	text-shadow: #fff 1px 1px, #fff -1px 1px, #fff -1px -1px, #fff 1px -1px;
+	text-align:center;
+}
+
+.close {
+	display:block;
+	background:url(../images/connexion/button_connect.png) no-repeat;
+	background-size:cover;
+	height:35px;
+	width:150px;
+	padding:15px 0 0 10px;
+	margin:0 auto;
+	font: 17px 'Fredoka One';
+	color:#e04312;
+	text-shadow: #fff 1px 1px, #fff -1px 1px, #fff -1px -1px, #fff 1px -1px;
+	border:none;
+	text-decoration:none;
+	text-transform:uppercase;
+	text-align:center;
+}
+
+.modalDialog .gifduel {
+	display:block;
+	margin:0 auto;
+	padding-bottom:20px;
+}
+/*FIN MODAL*/
+
+
+/*DEBUT DUEL*/
+.photoshop {
+	background: url(../images/salledeclasse/combat_photoshop.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position:relative;
+}
+.php {
+	background: url(../images/salledeclasse/combat_php.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position:relative;
+}
+.savoiretre {
+	background: url(../images/salledeclasse/combat_savoiretre.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position:relative;
+}
+.htmlcss {
+	background: url(../images/salledeclasse/combat_htmlcss.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position:relative;
+}
+.javascript {
+	background: url(../images/salledeclasse/combat_javascript.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position:relative;
+}
+.algo {
+	background: url(../images/salledeclasse/combat_algo.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position:relative;
+}
+
+
+.duel h2 {
+	padding-top:500px;
+	margin-left:250px;
+	font: 50px 'Fredoka One';
+	text-transform:uppercase;
+	color: #e04312;
+	text-shadow: #fff 2px 2px, #fff -2px 2px, #fff -2px -2px, #fff 2px -2px;
+}
+.duel table{
+	position:absolute;
+	bottom:70px;
+	left:100px;
+}
+.duel td span {
+	text-align:center;
+	margin:0 20px;
+}
+.duel td p {
+	font: 20px 'Fredoka One';
+	color: #fff;
+	text-align:center;
+}
+.bigboss {
+	padding-top:150px;
+	padding-left:400px;
+}
+input#bossHp {
+	display:block;
+	width:500px;
+	height:80px;
+	margin: 0 auto;
+	font: 40px 'Fredoka One';
+	background-color:#fff;
+	border:none;
+}
+/*FIN DUEL*/
+
+
+/*GAME OVER*/
+.gameover {
+	background: url(../images/connexion/bg_gameover.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position:relative;
+}
+#hihihi {
+	margin-top:155px;
+}
+@-webkit-keyframes yannhihi {
+  0% {
+    margin-top:155px;
+	margin-left:-350px;
+  }
+  100%{
+    margin-top:155px;
+	margin-left:0;
+  }
+}
+        
+
+#hihihi{
+  -webkit-animation: yannhihi 3s ease-in-out;
+}
+/*FIN GAME OVER*/
+
+/*VICTOIRE*/
+.victoire {
+	background: url(../images/connexion/bg_victoire.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position:relative;
+}
+/*FIN VICTOIRE*/
