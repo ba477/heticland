@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 13 Février 2015 à 15:37
+-- Généré le :  Ven 13 Février 2015 à 22:53
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -102,11 +102,11 @@ CREATE TABLE IF NOT EXISTS `boss` (
 
 INSERT INTO `boss` (`boss_id`, `boss_hp`, `boss_roomName`) VALUES
 (1, 100, 'savoiretre'),
-(2, 100, 'photoshop'),
+(2, 30, 'photoshop'),
 (4, 100, 'htmlcss'),
-(5, 100, 'javascript'),
+(5, -10, 'javascript'),
 (6, 100, 'algo'),
-(7, 100, 'php');
+(7, -25, 'php');
 
 -- --------------------------------------------------------
 
@@ -127,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `characters` (
   KEY `room` (`idRoom`),
   KEY `idUser` (`idUser`),
   KEY `idAttak` (`idAttak`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
 
 --
 -- Contenu de la table `characters`
@@ -135,7 +135,12 @@ CREATE TABLE IF NOT EXISTS `characters` (
 
 INSERT INTO `characters` (`idCharacter`, `nameCharacter`, `pnj`, `idRoom`, `hp`, `idUser`, `idAttak`, `moyenne`) VALUES
 (3, 'Test', 0, 1, 700, 1, 2, 0),
-(13, 'helloworld', 0, 1, 500, 11, 1, 0);
+(13, 'helloworld', 0, 1, 500, 11, 1, 0),
+(14, 'Pamela', 0, 1, 500, 12, 1, 0),
+(15, 'Marie', 0, 1, 500, 13, 1, 0),
+(16, 'sami', 0, 1, 500, 14, 1, 0),
+(17, 'GiinSiide', 0, 1, 500, 15, 1, 0),
+(18, 'nicolas', 0, 1, 500, 16, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -193,16 +198,8 @@ CREATE TABLE IF NOT EXISTS `sessions` (
   `session_date_modification` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `session_expiration` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`session_id`),
-  UNIQUE KEY `session_sess_id` (`session_sess_id`),
-  UNIQUE KEY `session_ip` (`session_ip`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
-
---
--- Contenu de la table `sessions`
---
-
-INSERT INTO `sessions` (`session_id`, `session_sess_id`, `session_ip`, `session_date_creation`, `session_date_modification`, `session_expiration`) VALUES
-(3, '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08', '', '2015-02-13 11:19:09', '2015-02-13 15:36:32', '2015-02-16 15:36:32');
+  UNIQUE KEY `session_sess_id` (`session_sess_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
 
 -- --------------------------------------------------------
 
@@ -215,15 +212,20 @@ CREATE TABLE IF NOT EXISTS `users` (
   `nameUser` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`idUser`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
 
 --
 -- Contenu de la table `users`
 --
 
 INSERT INTO `users` (`idUser`, `nameUser`, `password`) VALUES
-(1, 'test', '$2y$10$nJ0GMwBu53swW7dtXLviZ.AdVT4rPT.XPLCkukwVw7m.TcV6u8FXa'),
-(11, 'helloworld', '0138e3c1c03b9bec0d6393f50e7cc1d5');
+(1, 'test', '$2y$10$gsSFoABFcC/OoNGqbtCCHeG3diofb5cvcm0cd6IYHuQYqcuJpwhia'),
+(11, 'helloworld', '$2y$10$aOc/p.OSOoFAfExrfXGjxOLteUeliavTBaSaYlLHg426TtY1jLp/i'),
+(12, 'Pamela', '$2y$10$Dx3Jq8M7ZcCiwvw4LQSBvOqzyZffENNSC5J3Wnl1Gt65iykEAqLPy'),
+(13, 'Marie', '$2y$10$RNiHEKtquWYI.pB6WJ3jKOOEDqL.bpJyIrVW7Dl0J9h.IzMT5Io5q'),
+(14, 'sami', '$2y$10$eMoc4zlRH4MG2/JRz728T.aIM12VGsRaD7x7HnfMkX/bz6c72rH8K'),
+(15, 'GiinSiide', '$2y$10$HUmHWtOwJ48OansthVIpO.F20rVgRnee1Z.Uu8s56t4hwvvmZ8lfu'),
+(16, 'nicolas', '$2y$10$eKDtGOPgIAnau68dENIlauwDp/xuuynUo9owpyQ65ZJTTzU0i9X/C');
 
 --
 -- Contraintes pour les tables exportées

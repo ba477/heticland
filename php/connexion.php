@@ -79,10 +79,10 @@ if ( isset($_POST["name"], $_POST['pass1']) ) {
             $_SESSION['nameCharacter'] = $Character->nameCharacter;
             header('Location: ../welcome.php');
         } else {
-            header('Location: ../nomatch.php');
+            header('Location: ../user/nomatch.php');
         }
     } else {
-        header('Location: ../nologin.php');
+        header('Location: ../user/nologin.php');
     }
 }
 // } else

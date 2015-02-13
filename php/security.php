@@ -23,5 +23,5 @@ if ( $Result ) {
 
 	$db->query($UpdateQuery);
 } else {
-	// header("Location: http://localhost/heticland/index.php");
+	header("Location: http://localhost/heticland/index.php");
 }

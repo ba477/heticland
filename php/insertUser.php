@@ -18,11 +18,11 @@ while( $resultat = $resultats->fetch(PDO::FETCH_OBJ) )
 }
 
 if($exist){
-	header('Location: ../userexist.php');
+	header('Location: ../user/userexist.php');
 }elseif(empty($_POST['name']) || empty($_POST['pass1'])) {
-	header('Location: ../signin-empty.php');
+	header('Location: ../user/signin-empty.php');
 }elseif(($_POST['pass1'])!=($_POST['pass2'])) {
-	header('Location: ../signin-bis.php');
+	header('Location: ../user/signin-bis.php');
 }
 else
 {
